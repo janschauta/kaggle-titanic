@@ -11,8 +11,10 @@ docker build -t my-kaggle/python .
 ~~~
 
 #### Vytvorit container
+- bude protunelovany port 8888 do hosta
+- jupyter notebook je ale potreba poustet na ip 0.0.0.0, pokud ho chci videt v prohlizeci
 ~~~
-docker run --name kaggle-python -h kaggle-python -e DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix -v $HOME:/host_home -it my-kaggle/python
+docker run --name kaggle-python -h kaggle-python -e DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix -v $HOME:/host_home -p 8888:8888 -it my-kaggle/python
 ~~~
 
 #### Nastartovat container, pokud stoji

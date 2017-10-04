@@ -24,8 +24,3 @@ ENV HOME=/home/$USER
 WORKDIR /home/$USER
 
 CMD bash
-
-# Run
-# docker run --name cileni -h cileni -e DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix -v $HOME:/host_home -it cileni
-# Run Idea:
-# /host_home/path/to/idea/bin/idea.sh  > /dev/null 2>&1 &
